@@ -5,7 +5,7 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 px-4 bg-red-500">
+    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 px-4">
       <div className="max-w-4xl mx-auto text-center animate-fade-up">
         <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
           400+ Interview Questions
