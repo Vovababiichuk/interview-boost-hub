@@ -30,7 +30,7 @@ export default {
         },
         secondary: {
           DEFAULT: "#FFD700",
-          foreground: "#000000",
+          foreground: "#111015",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
