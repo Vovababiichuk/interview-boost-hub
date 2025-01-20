@@ -8,35 +8,35 @@ export const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1A1F2C]/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h1 
             onClick={() => navigate("/")} 
-            className="text-xl font-semibold text-foreground cursor-pointer hover:text-secondary transition-colors"
+            className="text-xl font-bold text-white cursor-pointer hover:text-secondary transition-colors"
           >
-            FrontPrep
+            BURGER BAR
           </h1>
         </div>
         <nav className="hidden md:flex items-center space-x-6">
           <Button
             variant="ghost"
-            onClick={() => navigate("/questions")}
-            className="text-foreground hover:text-secondary"
+            onClick={() => navigate("/menu")}
+            className="text-white hover:text-secondary"
           >
-            Questions
+            Menu
           </Button>
           <Button
             variant="ghost"
-            onClick={() => navigate("/progress")}
-            className="text-foreground hover:text-secondary"
+            onClick={() => navigate("/orders")}
+            className="text-white hover:text-secondary"
           >
-            Progress
+            Orders
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/profile")}
-            className="text-foreground hover:text-secondary"
+            className="text-white hover:text-secondary"
           >
             Profile
           </Button>
@@ -57,7 +57,7 @@ export const Header = () => {
           <Button
             onClick={() => navigate("/login")}
             variant="ghost"
-            className="text-foreground hover:text-secondary"
+            className="text-white hover:text-secondary"
           >
             Login
           </Button>
@@ -65,7 +65,7 @@ export const Header = () => {
             onClick={() => navigate("/register")}
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
           >
-            Get Started
+            Sign Up
           </Button>
         </div>
       </div>
