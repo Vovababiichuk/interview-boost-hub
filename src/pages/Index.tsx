@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#1A1F2C]">
+    <div className="min-h-screen">
       <Header />
       <main className="pt-16">
         <Hero />
