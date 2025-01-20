@@ -10,23 +10,23 @@ export const Hero = () => {
         <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
           400+ Interview Questions
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
           Master Your Front-End Interview
         </h1>
-        <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Practice with curated questions, track your progress, and boost your confidence for your next interview.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             onClick={() => navigate("/register")}
-            className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-lg w-full sm:w-auto"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 text-lg w-full sm:w-auto rounded-2xl"
           >
             Start Practicing Now
           </Button>
           <Button
             onClick={() => navigate("/questions")}
             variant="outline"
-            className="px-8 py-6 text-lg w-full sm:w-auto"
+            className="px-8 py-6 text-lg w-full sm:w-auto rounded-2xl border-secondary text-secondary hover:bg-secondary/10"
           >
             Browse Questions
           </Button>
@@ -37,9 +37,9 @@ export const Hero = () => {
             { title: "Difficulty Levels", value: "3" },
             { title: "Active Users", value: "1000+" },
           ].map((stat) => (
-            <div key={stat.title} className="p-6 rounded-lg bg-slate-50">
-              <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
-              <div className="text-slate-600">{stat.title}</div>
+            <div key={stat.title} className="glass p-6 rounded-2xl">
+              <div className="text-3xl font-bold text-secondary mb-2">{stat.value}</div>
+              <div className="text-muted-foreground">{stat.title}</div>
             </div>
           ))}
         </div>

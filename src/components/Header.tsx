@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export const Header = () => {
   const navigate = useNavigate();
+  const { theme, setTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h1 
             onClick={() => navigate("/")} 
-            className="text-xl font-semibold text-slate-800 cursor-pointer hover:text-primary transition-colors"
+            className="text-xl font-semibold text-foreground cursor-pointer hover:text-secondary transition-colors"
           >
             FrontPrep
           </h1>
@@ -19,36 +22,48 @@ export const Header = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/questions")}
-            className="text-slate-600 hover:text-slate-900"
+            className="text-foreground hover:text-secondary"
           >
             Questions
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/progress")}
-            className="text-slate-600 hover:text-slate-900"
+            className="text-foreground hover:text-secondary"
           >
             Progress
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/profile")}
-            className="text-slate-600 hover:text-slate-900"
+            className="text-foreground hover:text-secondary"
           >
             Profile
           </Button>
         </nav>
         <div className="flex items-center space-x-4">
           <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="rounded-full"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-5 w-5 text-secondary" />
+            ) : (
+              <Moon className="h-5 w-5 text-secondary" />
+            )}
+          </Button>
+          <Button
             onClick={() => navigate("/login")}
             variant="ghost"
-            className="text-slate-600 hover:text-slate-900"
+            className="text-foreground hover:text-secondary"
           >
             Login
           </Button>
           <Button
             onClick={() => navigate("/register")}
-            className="bg-secondary hover:bg-secondary/90 text-white"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
           >
             Get Started
           </Button>
