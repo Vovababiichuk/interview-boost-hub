@@ -7,10 +7,10 @@ export const Hero = () => {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 px-4">
       <div className="max-w-4xl mx-auto text-center animate-fade-up">
-        <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
+        <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6 border border-secondary/20">
           400+ Interview Questions
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-white to-white/50 bg-clip-text text-transparent">
           Master Your Front-End Interview
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -19,14 +19,14 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             onClick={() => navigate("/practice")}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 text-lg w-full sm:w-auto rounded-2xl"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 text-lg w-full sm:w-auto rounded-2xl shadow-lg shadow-secondary/20"
           >
             Start Practice
           </Button>
           <Button
             onClick={() => navigate("/questions")}
             variant="outline"
-            className="px-8 py-6 text-lg w-full sm:w-auto rounded-2xl border-secondary text-secondary hover:bg-secondary/10"
+            className="px-8 py-6 text-lg w-full sm:w-auto rounded-2xl border-secondary/50 text-secondary hover:bg-secondary/10 shadow-lg"
           >
             Browse Questions
           </Button>
@@ -37,8 +37,13 @@ export const Hero = () => {
             { title: "Topics", value: "15+" },
             { title: "Active Users", value: "10K+" },
           ].map((stat) => (
-            <div key={stat.title} className="glass p-6 rounded-2xl hover:bg-secondary/10 transition-all duration-300">
-              <div className="text-3xl font-bold text-secondary mb-2">{stat.value}</div>
+            <div 
+              key={stat.title} 
+              className="glass p-6 rounded-2xl hover:bg-secondary/5 transition-all duration-300 cursor-pointer group"
+            >
+              <div className="text-3xl font-bold text-secondary mb-2 group-hover:scale-105 transition-transform">
+                {stat.value}
+              </div>
               <div className="text-muted-foreground">{stat.title}</div>
             </div>
           ))}

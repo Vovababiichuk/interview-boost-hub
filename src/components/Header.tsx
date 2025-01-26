@@ -8,7 +8,7 @@ export const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-secondary/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-secondary/20">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h1 
@@ -22,21 +22,21 @@ export const Header = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/practice")}
-            className="hover:text-secondary hover:bg-secondary/10"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
           >
             Practice
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/questions")}
-            className="hover:text-secondary hover:bg-secondary/10"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
           >
             Questions
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/progress")}
-            className="hover:text-secondary hover:bg-secondary/10"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
           >
             Progress
           </Button>
@@ -57,13 +57,13 @@ export const Header = () => {
           <Button
             onClick={() => navigate("/login")}
             variant="ghost"
-            className="hover:text-secondary hover:bg-secondary/10"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
           >
             Login
           </Button>
           <Button
             onClick={() => navigate("/register")}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/20"
           >
             Sign Up
           </Button>
