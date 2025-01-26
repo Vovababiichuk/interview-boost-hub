@@ -10,7 +10,7 @@ export const Hero = () => {
         <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
           400+ Interview Questions
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
           Master Your Front-End Interview
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ export const Hero = () => {
             { title: "Topics", value: "15+" },
             { title: "Active Users", value: "10K+" },
           ].map((stat) => (
-            <div key={stat.title} className="glass p-6 rounded-2xl">
+            <div key={stat.title} className="glass p-6 rounded-2xl hover:bg-secondary/10 transition-all duration-300">
               <div className="text-3xl font-bold text-secondary mb-2">{stat.value}</div>
               <div className="text-muted-foreground">{stat.title}</div>
             </div>

@@ -8,7 +8,7 @@ export const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-secondary/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h1 
@@ -22,21 +22,21 @@ export const Header = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/practice")}
-            className="hover:text-secondary"
+            className="hover:text-secondary hover:bg-secondary/10"
           >
             Practice
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/questions")}
-            className="hover:text-secondary"
+            className="hover:text-secondary hover:bg-secondary/10"
           >
             Questions
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/progress")}
-            className="hover:text-secondary"
+            className="hover:text-secondary hover:bg-secondary/10"
           >
             Progress
           </Button>
@@ -46,7 +46,7 @@ export const Header = () => {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full"
+            className="rounded-full hover:bg-secondary/10"
           >
             {theme === "dark" ? (
               <Sun className="h-5 w-5 text-secondary" />
@@ -57,7 +57,7 @@ export const Header = () => {
           <Button
             onClick={() => navigate("/login")}
             variant="ghost"
-            className="hover:text-secondary"
+            className="hover:text-secondary hover:bg-secondary/10"
           >
             Login
           </Button>
