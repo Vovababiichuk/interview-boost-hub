@@ -22,21 +22,21 @@ export const Header = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/practice")}
-            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors rounded-xl"
           >
             Practice
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/questions")}
-            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors rounded-xl"
           >
             Questions
           </Button>
           <Button
             variant="ghost"
             onClick={() => navigate("/progress")}
-            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors rounded-xl"
           >
             Progress
           </Button>
@@ -46,7 +46,7 @@ export const Header = () => {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full hover:bg-secondary/10"
+            className="rounded-xl hover:bg-secondary/10"
           >
             {theme === "dark" ? (
               <Sun className="h-5 w-5 text-secondary" />
@@ -57,13 +57,13 @@ export const Header = () => {
           <Button
             onClick={() => navigate("/login")}
             variant="ghost"
-            className="hover:text-secondary hover:bg-secondary/10 transition-colors"
+            className="hover:text-secondary hover:bg-secondary/10 transition-colors rounded-xl"
           >
             Login
           </Button>
           <Button
             onClick={() => navigate("/register")}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/20"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/20 rounded-xl"
           >
             Sign Up
           </Button>

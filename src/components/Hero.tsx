@@ -10,7 +10,7 @@ export const Hero = () => {
         <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6 border border-secondary/20">
           400+ Interview Questions
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-white to-white/50 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Master Your Front-End Interview
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ export const Hero = () => {
             Browse Questions
           </Button>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { title: "Questions", value: "400+" },
             { title: "Topics", value: "15+" },
